@@ -72,7 +72,7 @@ jobs:
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Build the application
-      run: dotnet build $env:Project_Path --configuration $env:Configuration
+      run: dotnet build $env:Project_Path --configuration ${{ matrix.configuration }}
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
