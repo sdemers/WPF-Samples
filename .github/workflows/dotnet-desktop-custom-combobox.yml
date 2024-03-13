@@ -78,10 +78,8 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: custom-combobox
-        path: $env:Path
+        path: ${{ format('{0}/{1}/**', env.Artifact_Path, env.Configuration) }}
         if-no-files-found: error
-      env:
-        Path: ${{ format('{0}/{1}', env.Artifact_Path, env.Configuration) }}
 
 #    # Decode the base 64 encoded pfx and save the Signing_Certificate
 #    - name: Decode the pfx
