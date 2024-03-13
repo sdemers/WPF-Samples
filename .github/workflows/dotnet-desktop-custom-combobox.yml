@@ -54,7 +54,7 @@ jobs:
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
     env:
-      Artifact_Path: 'Sample Applications/CustomComboBox/bin/'
+      Artifact_Path: 'Sample Applications/CustomComboBox/bin'
       Project_Path: 'Sample Applications/CustomComboBox/CustomComboBox.csproj'
       Configuration: ${{ matrix.configuration }}
 
