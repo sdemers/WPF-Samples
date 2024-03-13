@@ -77,7 +77,7 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: custom-combobox
+        name: ${{ format('custom-combobox-{0}', env.Configuration) }}
         path: ${{ format('{0}/{1}/**', env.Artifact_Path, env.Configuration) }}
         if-no-files-found: error
 
